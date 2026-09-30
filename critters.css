@@ -1,0 +1,75 @@
+/* Six distinct drift paths so a handful of reused icons never look
+   like they're all moving in lockstep. Mix of translate + rotate,
+   applied at different durations/delays per instance. */
+
+@keyframes drift-a {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(14px, -18px) rotate(8deg); }
+  50%  { transform: translate(-8px, -28px) rotate(-6deg); }
+  75%  { transform: translate(-18px, -8px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes drift-b {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  30%  { transform: translate(-16px, 10px) rotate(-10deg); }
+  60%  { transform: translate(-6px, 22px) rotate(6deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes drift-c {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(10px, 12px) rotate(6deg); }
+  50%  { transform: translate(20px, -6px) rotate(-8deg); }
+  80%  { transform: translate(4px, -16px) rotate(4deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes drift-d {
+  0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50%  { transform: translate(-12px, -14px) rotate(-5deg) scale(1.05); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
+
+@keyframes drift-e {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  40%  { transform: translate(16px, -10px) rotate(10deg); }
+  70%  { transform: translate(6px, 16px) rotate(-8deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes drift-f {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  35%  { transform: translate(-10px, -20px) rotate(-6deg); }
+  65%  { transform: translate(12px, -8px) rotate(8deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes cloud-float {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(24px); }
+}
+
+.critter {
+  position: absolute;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+  will-change: transform;
+}
+
+.critter--a { animation: drift-a 6s ease-in-out infinite; }
+.critter--b { animation: drift-b 7s ease-in-out infinite; }
+.critter--c { animation: drift-c 8s ease-in-out infinite; }
+.critter--d { animation: drift-d 5s ease-in-out infinite; }
+.critter--e { animation: drift-e 9s ease-in-out infinite; }
+.critter--f { animation: drift-f 6.5s ease-in-out infinite; }
+
+.critter--cloud {
+  animation: cloud-float 8s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .critter,
+  .critter--cloud {
+    animation: none;
+  }
+}

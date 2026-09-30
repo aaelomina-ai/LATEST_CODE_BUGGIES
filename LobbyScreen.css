@@ -1,0 +1,53 @@
+.lobby-panel {
+  gap: 16px;
+}
+
+.lobby-code {
+  margin: 0;
+  color: #b9c3e0;
+  font-size: clamp(8px, 1vw, 10px);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.lobby-code__value {
+  color: #ffd94d;
+  letter-spacing: 4px;
+  text-shadow: 0 0 8px rgba(255, 217, 77, 0.8);
+}
+
+.lobby-players {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lobby-slot {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px dashed #2f7a52;
+  border-radius: 8px;
+  color: #5a6b8c;
+  font-size: clamp(9px, 1.2vw, 11px);
+  letter-spacing: 1px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.lobby-slot--filled {
+  border-style: solid;
+  border-color: #39ff6a;
+  color: #f2f2f2;
+  background: rgba(57, 255, 106, 0.08);
+  box-shadow: 0 0 8px rgba(57, 255, 106, 0.3);
+}
+
+.lobby-countdown {
+  margin: 0;
+  color: #ffd94d;
+  font-size: clamp(12px, 1.6vw, 16px);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 217, 77, 0.8);
+  text-align: center;
+}

@@ -1,0 +1,117 @@
+.learning-hub {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.learning-hub__heading {
+  margin: 0;
+  color: #39ff6a;
+  font-size: clamp(12px, 1.8vw, 18px);
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #0f7a34, 0 0 12px rgba(57, 255, 106, 0.6);
+  text-align: center;
+  max-width: min(90vw, 480px);
+}
+
+/* ---------- language grid ---------- */
+.learning-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 260px));
+  gap: 16px;
+}
+
+.lang-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px;
+  background: rgba(10, 7, 20, 0.75);
+  border: 2px solid #39ff6a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-family: "Press Start 2P", monospace;
+}
+
+.lang-card:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 0 14px rgba(57, 255, 106, 0.5);
+}
+
+.lang-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lang-card__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.lang-card__label {
+  color: #f2f2f2;
+  font-size: clamp(8px, 1.1vw, 10px);
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ---------- difficulty list ---------- */
+.learning-hub__difficulty-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(80vw, 320px);
+}
+
+.diff-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: rgba(10, 7, 20, 0.75);
+  border: 2px solid #39ff6a;
+  border-radius: 10px;
+  color: #f2f2f2;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(9px, 1.2vw, 12px);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.diff-card:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(57, 255, 106, 0.5);
+}
+
+.diff-card--locked {
+  border-color: #4a4a5a;
+  color: #6a6a7a;
+  cursor: not-allowed;
+}
+
+.diff-card__badge {
+  position: absolute;
+  right: 10px;
+  color: #39ff6a;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.diff-card__lock {
+  position: absolute;
+  right: 10px;
+  color: #ff8080;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 560px) {
+  .learning-hub__grid {
+    grid-template-columns: minmax(180px, 260px);
+  }
+}

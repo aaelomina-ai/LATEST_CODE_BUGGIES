@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.scene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 20%, #2c2154 0%, #1a1230 55%, #120c22 100%);
+  font-family: "Press Start 2P", monospace;
+}
+
+/* faint web / circuit line texture over the whole scene */
+.scene__texture {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      120deg,
+      transparent 49%,
+      rgba(140, 180, 255, 0.12) 49%,
+      rgba(140, 180, 255, 0.12) 51%,
+      transparent 51%
+    ),
+    linear-gradient(
+      60deg,
+      transparent 49%,
+      rgba(140, 180, 255, 0.1) 49%,
+      rgba(140, 180, 255, 0.1) 51%,
+      transparent 51%
+    ),
+    radial-gradient(rgba(140, 180, 255, 0.5) 1.5px, transparent 1.5px);
+  background-size: 140px 140px, 140px 140px, 34px 34px;
+  opacity: 0.7;
+}
+
+/* glowing blue vortex, bottom-left, like a portal into the game */
+.scene__vortex {
+  position: absolute;
+  left: -8%;
+  bottom: -12%;
+  width: 46vmin;
+  height: 46vmin;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(76, 201, 255, 0.55) 0%,
+    rgba(76, 120, 255, 0.35) 30%,
+    rgba(40, 30, 90, 0) 70%
+  );
+  filter: blur(2px);
+  animation: vortex-spin 14s linear infinite;
+}
+.scene__vortex::before,
+.scene__vortex::after {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  border: 2px dashed rgba(150, 220, 255, 0.35);
+}
+.scene__vortex::after {
+  inset: 20%;
+  border-color: rgba(150, 220, 255, 0.25);
+  animation: vortex-spin 9s linear infinite reverse;
+}
+
+/* neon-green rounded frame, inset from the viewport edge */
+.scene__border {
+  position: absolute;
+  inset: 14px;
+  border: 3px solid #39ff6a;
+  border-radius: 22px;
+  box-shadow: 0 0 12px rgba(57, 255, 106, 0.6), inset 0 0 12px rgba(57, 255, 106, 0.35);
+  pointer-events: none;
+}
+
+.scene__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes vortex-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene__vortex,
+  .scene__vortex::before,
+  .scene__vortex::after {
+    animation: none;
+  }
+}

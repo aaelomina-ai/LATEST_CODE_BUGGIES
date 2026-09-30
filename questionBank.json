@@ -1,0 +1,2622 @@
+{
+  "game": "CODE_BUGGIES",
+  "version": "2.0",
+  "description": "CODE_BUGGIES question bank: 30 questions per language (Python, JavaScript, Java, C++), 10 per difficulty level (Beginner, Intermediate, Hard), each level balanced across Multiple Choice, Fill in the Blank, Output Prediction, and Debugging.",
+  "difficulty_scale": {
+    "Beginner": {
+      "points": 10,
+      "time_limit_seconds": 20
+    },
+    "Intermediate": {
+      "points": 20,
+      "time_limit_seconds": 30
+    },
+    "Hard": {
+      "points": 40,
+      "time_limit_seconds": 50
+    }
+  },
+  "questions": [
+    {
+      "question_id": "PY-BEG-MCQ-001",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which of the following is the correct way to check if a variable `age` is greater than or equal to 18 in Python?",
+      "code_snippet": null,
+      "choices": [
+        "if age => 18:",
+        "if age >= 18:",
+        "if (age => 18):",
+        "if age =< 18:"
+      ],
+      "correct_answer": "if age >= 18:",
+      "explanation": "Python uses >= for 'greater than or equal to'. The symbol => is not a valid Python operator.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "operators",
+        "conditionals"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-BEG-MCQ-002",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which of the following is a valid variable name in Python?",
+      "code_snippet": null,
+      "choices": [
+        "2nd_place",
+        "class",
+        "total_score",
+        "my-variable"
+      ],
+      "correct_answer": "total_score",
+      "explanation": "Variable names can't start with a digit, can't be reserved keywords like class, and can't contain hyphens; underscores are fine.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax",
+        "variables"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-BEG-MCQ-003",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "What is the data type returned by Python's input() function by default?",
+      "code_snippet": null,
+      "choices": [
+        "int",
+        "float",
+        "str",
+        "bool"
+      ],
+      "correct_answer": "str",
+      "explanation": "input() always returns a string, even if the user types a number; you must convert it manually with int() or float().",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "input/output",
+        "data types"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-BEG-FIB-001",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to complete the else branch.",
+      "code_snippet": "temperature = 30\nif temperature > 25:\n    print(\"It's hot\")\n______:\n    print(\"It's cool\")",
+      "choices": null,
+      "correct_answer": "else",
+      "explanation": "else runs when the if condition is False.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "conditionals",
+        "syntax"
+      ],
+      "accepted_answers": [
+        "else"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-FIB-002",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank using an f-string so this prints the value of `age`.",
+      "code_snippet": "name = \"Ana\"\nage = 16\nprint(f\"{name} is ______ years old\")",
+      "choices": null,
+      "correct_answer": "{age}",
+      "explanation": "Inside an f-string, curly braces {} let you insert a variable's value directly into the string.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "strings",
+        "f-strings"
+      ],
+      "accepted_answers": [
+        "{age}",
+        "age"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-OUT-001",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What will this code print?",
+      "code_snippet": "x = 5\ny = 2\nprint(x // y, x % y)",
+      "choices": null,
+      "correct_answer": "2 1",
+      "explanation": "// is floor (integer) division, so 5 // 2 = 2. % is the modulus operator, so 5 % 2 = 1.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "operators",
+        "integer division"
+      ],
+      "accepted_answers": [
+        "2 1",
+        "2, 1"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-OUT-002",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "i = 1\nwhile i < 4:\n    print(i)\n    i += 1",
+      "choices": null,
+      "correct_answer": "1 2 3",
+      "explanation": "The loop runs while i is less than 4, printing 1, 2, then 3, and stops once i becomes 4.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "while loops"
+      ],
+      "accepted_answers": [
+        "1 2 3",
+        "1\n2\n3"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-OUT-003",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "a = True\nb = False\nprint(a and b)\nprint(a or b)",
+      "choices": null,
+      "correct_answer": "False then True",
+      "explanation": "`and` is True only when both are True; `or` is True when at least one is True.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "booleans",
+        "logical operators"
+      ],
+      "accepted_answers": [
+        "False then True",
+        "False\nTrue"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-DBG-001",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code raises an IndentationError. What is the bug, and how do you fix it?",
+      "code_snippet": "age = 20\nif age >= 18:\nprint(\"You are an adult\")",
+      "choices": null,
+      "correct_answer": "The line inside the if block isn't indented. It must be indented under the if statement.",
+      "explanation": "Python uses indentation, not braces, to define code blocks \u2014 every line inside an if must be indented consistently.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax errors",
+        "indentation"
+      ],
+      "accepted_answers": [
+        "indent the print statement",
+        "missing indentation under if"
+      ]
+    },
+    {
+      "question_id": "PY-BEG-DBG-002",
+      "language": "Python",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code fails to run. What is the bug?",
+      "code_snippet": "score = 85\nif score >= 60\n    print(\"Pass\")",
+      "choices": null,
+      "correct_answer": "Missing colon at the end of the if statement \u2014 it should be `if score >= 60:`",
+      "explanation": "Python requires a colon at the end of if/for/while/def statement lines before the indented block.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax errors"
+      ],
+      "accepted_answers": [
+        "missing colon",
+        "add : after the condition"
+      ]
+    },
+    {
+      "question_id": "PY-INT-FIB-001",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so the function correctly counts the vowels in `word`.",
+      "code_snippet": "def count_vowels(word):\n    vowels = \"aeiou\"\n    count = 0\n    for letter in word:\n        if letter in vowels:\n            ______\n    return count",
+      "choices": null,
+      "correct_answer": "count += 1",
+      "explanation": "Every time a vowel is found, the counter needs to increase by one.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "functions",
+        "loops",
+        "strings"
+      ],
+      "accepted_answers": [
+        "count += 1",
+        "count = count + 1"
+      ]
+    },
+    {
+      "question_id": "PY-INT-FIB-002",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so power(5) returns 25 by default.",
+      "code_snippet": "def power(base, exponent=______):\n    return base ** exponent\n\nprint(power(5))     # 25\nprint(power(2, 3))  # 8",
+      "choices": null,
+      "correct_answer": "2",
+      "explanation": "With exponent defaulting to 2, power(5) computes 5 ** 2 = 25, while power(2, 3) overrides it to compute 2 ** 3 = 8.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "functions",
+        "default parameters"
+      ],
+      "accepted_answers": [
+        "2"
+      ]
+    },
+    {
+      "question_id": "PY-INT-MCQ-001",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "A student writes `scores = (85, 90, 78)` then runs `scores[0] = 100`. What happens?",
+      "code_snippet": null,
+      "choices": [
+        "The first score changes to 100 with no error",
+        "A TypeError is raised because tuples are immutable",
+        "Python automatically converts the tuple to a list",
+        "It raises an IndexError"
+      ],
+      "correct_answer": "A TypeError is raised because tuples are immutable",
+      "explanation": "Tuples cannot be changed after they are created, so assigning to an index raises a TypeError.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "tuples",
+        "data structures",
+        "immutability"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-INT-MCQ-002",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What happens when you run `d = {\"a\": 1, \"b\": 2}; print(d[\"c\"])`?",
+      "code_snippet": null,
+      "choices": [
+        "It prints None",
+        "It prints an empty string",
+        "It raises a KeyError",
+        "It prints 0"
+      ],
+      "correct_answer": "It raises a KeyError",
+      "explanation": "Accessing a dictionary key that doesn't exist raises a KeyError; use d.get(\"c\") to get None instead.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "dictionaries",
+        "exceptions"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-INT-MCQ-003",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What is `nums[1:4]` if `nums = [10, 20, 30, 40, 50]`?",
+      "code_snippet": null,
+      "choices": [
+        "[10, 20, 30, 40]",
+        "[20, 30, 40]",
+        "[20, 30, 40, 50]",
+        "[10, 20, 30]"
+      ],
+      "correct_answer": "[20, 30, 40]",
+      "explanation": "Slicing [1:4] includes indices 1, 2, and 3 (up to but not including 4): 20, 30, 40.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "lists",
+        "slicing"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-INT-OUT-001",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this code print?",
+      "code_snippet": "numbers = [4, 7, 2, 9, 5]\ntotal = 0\nfor n in numbers:\n    if n % 2 == 0:\n        total += n\nprint(total)",
+      "choices": null,
+      "correct_answer": "6",
+      "explanation": "Only the even numbers 4 and 2 are added together: 4 + 2 = 6.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "conditionals",
+        "lists"
+      ],
+      "accepted_answers": [
+        "6"
+      ]
+    },
+    {
+      "question_id": "PY-INT-OUT-002",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "text = \"Hello World\"\nprint(text.lower().replace(\"world\", \"python\"))",
+      "choices": null,
+      "correct_answer": "hello python",
+      "explanation": "lower() converts the whole string to lowercase first, so \"World\" becomes \"world\" and can then be matched and replaced.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "strings",
+        "string methods"
+      ],
+      "accepted_answers": [
+        "hello python"
+      ]
+    },
+    {
+      "question_id": "PY-INT-OUT-003",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "scores = {\"Ana\": 90, \"Ben\": 75, \"Cy\": 88}\nfor name, score in scores.items():\n    if score >= 85:\n        print(name)",
+      "choices": null,
+      "correct_answer": "Ana Cy",
+      "explanation": "items() lets you loop over key-value pairs together; the condition filters names whose score is 85 or higher.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "dictionaries",
+        "loops"
+      ],
+      "accepted_answers": [
+        "Ana Cy",
+        "Ana\nCy"
+      ]
+    },
+    {
+      "question_id": "PY-INT-DBG-001",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This function is supposed to start with a fresh empty cart each call, but the second call shows unexpected results. What's the bug, and how would you fix it?",
+      "code_snippet": "def add_item(item, cart=[]):\n    cart.append(item)\n    return cart\n\nprint(add_item(\"apple\"))\nprint(add_item(\"banana\"))",
+      "choices": null,
+      "correct_answer": "Mutable default arguments (like a list) are created once and reused across calls. Fix by using cart=None and creating a new list inside the function if cart is None.",
+      "explanation": "Default argument values are evaluated once when the function is defined, not each time it's called, so a mutable default like a list persists and accumulates values between calls.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "functions",
+        "default arguments",
+        "common pitfalls"
+      ],
+      "accepted_answers": [
+        "mutable default argument bug",
+        "use cart=None and create list inside function",
+        "default list is shared across calls"
+      ]
+    },
+    {
+      "question_id": "PY-INT-DBG-002",
+      "language": "Python",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This function should return the index of `target` in the list, but it fails to find the last element. What's the bug?",
+      "code_snippet": "def find_index(items, target):\n    for i in range(len(items) - 1):\n        if items[i] == target:\n            return i\n    return -1\n\nprint(find_index([3, 7, 9, 2], 2))",
+      "choices": null,
+      "correct_answer": "range(len(items) - 1) excludes the last index. It should be range(len(items)).",
+      "explanation": "range(len(items) - 1) stops one short of the final index, so the last element in the list is never checked.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "indexing",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "use range(len(items)) instead of range(len(items) - 1)",
+        "loop excludes the last index"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-DBG-001",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This function is supposed to remove all negative numbers, but it skips some when there are consecutive negatives. What is the bug, and how would you fix it?",
+      "code_snippet": "def remove_negatives(numbers):\n    for n in numbers:\n        if n < 0:\n            numbers.remove(n)\n    return numbers\n\nprint(remove_negatives([1, -2, -3, 4, -5]))",
+      "choices": null,
+      "correct_answer": "Removing items from a list while iterating over it shifts the indices, causing elements to be skipped. Iterate over a copy (numbers[:]) or use a list comprehension instead.",
+      "explanation": "Modifying a list during iteration changes the positions of remaining elements, so the loop can skip over items. A safe fix is `for n in numbers[:]:` or `return [n for n in numbers if n >= 0]`.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "lists",
+        "iteration",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "iterate over a copy",
+        "numbers[:]",
+        "list comprehension",
+        "don't modify a list while iterating over it"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-DBG-002",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This function should return the average of every number in the list, but it contains multiple bugs. Identify ALL of them.",
+      "code_snippet": "def average(numbers):\n    total = 0\n    for i in range(1, len(numbers)):\n        total = total + numbers[i]\n    count = len(numbers) - 1\n    return total // count",
+      "choices": null,
+      "correct_answer": "Bug 1: range(1, len(numbers)) skips index 0. Bug 2: count is len(numbers) - 1 instead of len(numbers). Bug 3: // performs floor division, truncating the decimal part.",
+      "explanation": "The loop starts at index 1 so the first element is never added; count is one less than the true number of elements; and floor division (//) drops the decimal part instead of giving a true average.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "loops",
+        "indexing",
+        "division",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "loop should start at index 0 / range(len(numbers))",
+        "count should be len(numbers), not len(numbers) - 1",
+        "use / instead of // for true division"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-FIB-001",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Complete the recursive call so this function correctly computes a factorial.",
+      "code_snippet": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * ______",
+      "choices": null,
+      "correct_answer": "factorial(n - 1)",
+      "explanation": "The recursive step multiplies n by the factorial of n - 1, eventually reaching the base case n == 0.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "recursion",
+        "functions"
+      ],
+      "accepted_answers": [
+        "factorial(n - 1)",
+        "factorial(n-1)"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-FIB-002",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to complete this dictionary comprehension mapping each number to its square.",
+      "code_snippet": "squares = {x: ______ for x in range(1, 6)}\nprint(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}",
+      "choices": null,
+      "correct_answer": "x * x",
+      "explanation": "A dict comprehension {key: value for x in iterable} builds a dictionary; here each x maps to x squared.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "dictionary comprehension",
+        "comprehensions"
+      ],
+      "accepted_answers": [
+        "x * x",
+        "x**2",
+        "x ** 2"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-MCQ-001",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is the output of this code?",
+      "code_snippet": "a = [[1, 2], [3, 4]]\nb = a.copy()\nb[0][0] = 99\nprint(a[0][0])",
+      "choices": [
+        "1",
+        "99",
+        "Error",
+        "None"
+      ],
+      "correct_answer": "99",
+      "explanation": "list.copy() makes a shallow copy: the outer list is new, but the inner lists are still shared references, so changing b[0][0] also changes a[0][0].",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "copying",
+        "lists",
+        "references"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-HARD-MCQ-002",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What does the following code output?",
+      "code_snippet": "def outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x += 5\n        return x\n    return inner()\n\nprint(outer())",
+      "choices": [
+        "10",
+        "15",
+        "5",
+        "Error"
+      ],
+      "correct_answer": "15",
+      "explanation": "nonlocal lets inner() modify the enclosing function's variable x directly, so x becomes 10 + 5 = 15.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "closures",
+        "nonlocal",
+        "nested functions"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-HARD-MCQ-003",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "def gen():\n    yield 1\n    yield 2\n    yield 3\n\ng = gen()\nprint(next(g))\nprint(next(g))",
+      "choices": [
+        "1 2",
+        "1 1",
+        "3 3",
+        "Error, generators can't use next()"
+      ],
+      "correct_answer": "1 2",
+      "explanation": "Each call to next() resumes the generator from where it last paused, returning the next yielded value: first 1, then 2.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "generators",
+        "yield",
+        "iterators"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "PY-HARD-OUT-001",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this code print?",
+      "code_snippet": "def make_multiplier(factor):\n    return lambda x: x * factor\n\nmultipliers = [make_multiplier(i) for i in range(1, 4)]\nprint(multipliers[0](10), multipliers[2](10))",
+      "choices": null,
+      "correct_answer": "10 30",
+      "explanation": "Because `factor` is passed as a parameter to make_multiplier on each call, every lambda captures its own value of factor. multipliers[0] uses factor=1 -> 10, multipliers[2] uses factor=3 -> 30.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "closures",
+        "lambda",
+        "list comprehension"
+      ],
+      "accepted_answers": [
+        "10 30",
+        "10, 30"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-OUT-002",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print (in order)?",
+      "code_snippet": "def divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return \"Cannot divide by zero\"\n    finally:\n        print(\"Done\")\n\nprint(divide(10, 0))",
+      "choices": null,
+      "correct_answer": "Done then Cannot divide by zero",
+      "explanation": "The finally block always runs before the function actually returns, so \"Done\" is printed first; only after that does the caller's print() show the returned string.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "exception handling",
+        "try/except/finally"
+      ],
+      "accepted_answers": [
+        "Done then Cannot divide by zero",
+        "Done\nCannot divide by zero"
+      ]
+    },
+    {
+      "question_id": "PY-HARD-OUT-003",
+      "language": "Python",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "matrix = [[1, 2, 3], [4, 5, 6]]\nflat = [num for row in matrix for num in row if num % 2 == 0]\nprint(flat)",
+      "choices": null,
+      "correct_answer": "[2, 4, 6]",
+      "explanation": "A nested list comprehension flattens the matrix row by row, keeping only the even numbers found: 2, 4, and 6.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "list comprehension",
+        "nested loops"
+      ],
+      "accepted_answers": [
+        "[2, 4, 6]"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-MCQ-001",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which comparison operator checks both value and type in JavaScript?",
+      "code_snippet": null,
+      "choices": [
+        "==",
+        "===",
+        "=",
+        "!="
+      ],
+      "correct_answer": "===",
+      "explanation": "=== is the strict equality operator: it compares value and type without converting either side.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "operators",
+        "equality"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-BEG-MCQ-002",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which of the following is a valid variable name in JavaScript?",
+      "code_snippet": null,
+      "choices": [
+        "2ndPlace",
+        "let",
+        "totalScore",
+        "my-variable"
+      ],
+      "correct_answer": "totalScore",
+      "explanation": "Variable names can't start with a digit, can't be reserved keywords like let, and can't contain hyphens.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax",
+        "variables"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-BEG-MCQ-003",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "What does `typeof \"42\"` evaluate to?",
+      "code_snippet": null,
+      "choices": [
+        "\"number\"",
+        "\"string\"",
+        "\"boolean\"",
+        "\"undefined\""
+      ],
+      "correct_answer": "\"string\"",
+      "explanation": "Even though \"42\" looks numeric, it is wrapped in quotes, so JavaScript treats it as a string.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "data types",
+        "typeof"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-BEG-FIB-001",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to complete the else branch.",
+      "code_snippet": "let temperature = 30;\nif (temperature > 25) {\n  console.log(\"It's hot\");\n} ______ {\n  console.log(\"It's cool\");\n}",
+      "choices": null,
+      "correct_answer": "else",
+      "explanation": "else runs when the if condition is false.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "conditionals",
+        "syntax"
+      ],
+      "accepted_answers": [
+        "else"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-FIB-002",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank using a template literal so this prints the value of `age`.",
+      "code_snippet": "let name = \"Ana\";\nlet age = 16;\nconsole.log(`${name} is ______ years old`);",
+      "choices": null,
+      "correct_answer": "${age}",
+      "explanation": "Inside backticks, ${} lets you embed a variable's value directly into the string.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "strings",
+        "template literals"
+      ],
+      "accepted_answers": [
+        "${age}",
+        "age"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-OUT-001",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What is printed by these two lines?",
+      "code_snippet": "let x = \"5\";\nlet y = 2;\nconsole.log(x + y);\nconsole.log(x - y);",
+      "choices": null,
+      "correct_answer": "52 then 3",
+      "explanation": "+ concatenates when either operand is a string, giving \"52\". - has no string meaning, so JavaScript converts \"5\" to a number first, giving 3.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "type coercion",
+        "operators"
+      ],
+      "accepted_answers": [
+        "52 then 3",
+        "52\n3",
+        "'52' and 3"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-OUT-002",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "let i = 1;\nwhile (i < 4) {\n  console.log(i);\n  i++;\n}",
+      "choices": null,
+      "correct_answer": "1 2 3",
+      "explanation": "The loop runs while i is less than 4, logging 1, 2, then 3, and stops once i becomes 4.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "while loops"
+      ],
+      "accepted_answers": [
+        "1 2 3",
+        "1\n2\n3"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-OUT-003",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "let a = true;\nlet b = false;\nconsole.log(a && b);\nconsole.log(a || b);",
+      "choices": null,
+      "correct_answer": "false then true",
+      "explanation": "&& is true only when both are true; || is true when at least one is true.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "booleans",
+        "logical operators"
+      ],
+      "accepted_answers": [
+        "false then true",
+        "false\ntrue"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-DBG-001",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code throws a SyntaxError. What is the bug?",
+      "code_snippet": "let age = 20;\nif (age >= 18 {\n  console.log(\"You are an adult\");\n}",
+      "choices": null,
+      "correct_answer": "Missing closing parenthesis after the condition \u2014 it should be `if (age >= 18) {`.",
+      "explanation": "The if condition needs both an opening and closing parenthesis before the curly brace that starts the block.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax errors"
+      ],
+      "accepted_answers": [
+        "missing closing parenthesis after age >= 18",
+        "should be if (age >= 18) {"
+      ]
+    },
+    {
+      "question_id": "JS-BEG-DBG-002",
+      "language": "JavaScript",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code throws a TypeError. What is the bug, and how would you fix it?",
+      "code_snippet": "const score = 85;\nscore = 90;\nconsole.log(score);",
+      "choices": null,
+      "correct_answer": "const cannot be reassigned; use let instead if the value needs to change.",
+      "explanation": "const creates a variable binding that cannot be reassigned after its initial value is set; use `let` if the value needs to change later.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "variables",
+        "const vs let"
+      ],
+      "accepted_answers": [
+        "const cannot be reassigned, use let instead"
+      ]
+    },
+    {
+      "question_id": "JS-INT-FIB-001",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank with the array method that lets this code find the maximum value.",
+      "code_snippet": "const nums = [3, 8, 1, 9, 4];\nconst max = nums.______((a, b) => a > b ? a : b);\nconsole.log(max); // 9",
+      "choices": null,
+      "correct_answer": "reduce",
+      "explanation": "Array.prototype.reduce accumulates a single result by repeatedly comparing pairs of elements.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "higher-order functions"
+      ],
+      "accepted_answers": [
+        "reduce"
+      ]
+    },
+    {
+      "question_id": "JS-INT-FIB-002",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so power(5) returns 25 by default.",
+      "code_snippet": "function power(base, exponent = ______) {\n  return base ** exponent;\n}\nconsole.log(power(5));     // 25\nconsole.log(power(2, 3));  // 8",
+      "choices": null,
+      "correct_answer": "2",
+      "explanation": "With exponent defaulting to 2, power(5) computes 5 ** 2 = 25, while power(2, 3) overrides it to 2 ** 3 = 8.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "functions",
+        "default parameters"
+      ],
+      "accepted_answers": [
+        "2"
+      ]
+    },
+    {
+      "question_id": "JS-INT-MCQ-001",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What is logged by this code?",
+      "code_snippet": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}",
+      "choices": [
+        "0 1 2",
+        "3 3 3",
+        "0 0 0",
+        "undefined undefined undefined"
+      ],
+      "correct_answer": "3 3 3",
+      "explanation": "var is function-scoped, not block-scoped, so all three callbacks share the same variable i, which equals 3 by the time they run.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "closures",
+        "var vs let",
+        "asynchronous"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-INT-MCQ-002",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What happens when you run this code?",
+      "code_snippet": "const obj = { a: 1, b: 2 };\nconsole.log(obj.c);",
+      "choices": [
+        "It throws a ReferenceError",
+        "It prints undefined",
+        "It prints null",
+        "It throws a TypeError"
+      ],
+      "correct_answer": "It prints undefined",
+      "explanation": "Accessing a non-existent property on an object returns undefined rather than throwing an error.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "objects",
+        "undefined"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-INT-MCQ-003",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What is `nums.slice(1, 4)` if `nums = [10, 20, 30, 40, 50]`?",
+      "code_snippet": null,
+      "choices": [
+        "[10, 20, 30, 40]",
+        "[20, 30, 40]",
+        "[20, 30, 40, 50]",
+        "[10, 20, 30]"
+      ],
+      "correct_answer": "[20, 30, 40]",
+      "explanation": "slice(1, 4) returns elements from index 1 up to (but not including) index 4: 20, 30, 40.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "slice"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-INT-OUT-001",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this code print?",
+      "code_snippet": "function greet(name = \"Guest\") {\n  return `Hello, ${name}!`;\n}\nconsole.log(greet());\nconsole.log(greet(\"Maria\"));",
+      "choices": null,
+      "correct_answer": "Hello, Guest! then Hello, Maria!",
+      "explanation": "Default parameters are only used when the argument is missing or undefined, so the first call uses \"Guest\" and the second uses \"Maria\".",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "functions",
+        "default parameters",
+        "template literals"
+      ],
+      "accepted_answers": [
+        "Hello, Guest! then Hello, Maria!",
+        "Hello, Guest!\nHello, Maria!"
+      ]
+    },
+    {
+      "question_id": "JS-INT-OUT-002",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "let text = \"Hello World\";\nconsole.log(text.toLowerCase().replace(\"world\", \"javascript\"));",
+      "choices": null,
+      "correct_answer": "hello javascript",
+      "explanation": "toLowerCase() converts the whole string first, so \"World\" becomes \"world\" and can then be matched by replace().",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "strings",
+        "string methods"
+      ],
+      "accepted_answers": [
+        "hello javascript"
+      ]
+    },
+    {
+      "question_id": "JS-INT-OUT-003",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "const scores = { Ana: 90, Ben: 75, Cy: 88 };\nfor (const name in scores) {\n  if (scores[name] >= 85) {\n    console.log(name);\n  }\n}",
+      "choices": null,
+      "correct_answer": "Ana Cy",
+      "explanation": "for...in loops over an object's keys; the condition filters names whose score is 85 or higher.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "objects",
+        "loops"
+      ],
+      "accepted_answers": [
+        "Ana Cy",
+        "Ana\nCy"
+      ]
+    },
+    {
+      "question_id": "JS-INT-DBG-001",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This function should remove all negative numbers, but it doesn't work correctly for consecutive negatives. What's the bug, and how would you fix it?",
+      "code_snippet": "function removeNegatives(numbers) {\n  for (let i = 0; i < numbers.length; i++) {\n    if (numbers[i] < 0) {\n      numbers.splice(i, 1);\n    }\n  }\n  return numbers;\n}\nconsole.log(removeNegatives([1, -2, -3, 4, -5]));",
+      "choices": null,
+      "correct_answer": "splice() shifts remaining elements down, so incrementing i skips the next element. Decrement i after splicing, iterate backwards, or use filter() instead.",
+      "explanation": "splice() shifts every later element one position to the left, so the loop's next i skips over the element that just moved into the removed spot. Iterating backwards or using `numbers.filter(n => n >= 0)` avoids the problem.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "iteration",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "decrement i after splice",
+        "iterate backwards",
+        "use filter() instead"
+      ]
+    },
+    {
+      "question_id": "JS-INT-DBG-002",
+      "language": "JavaScript",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This function should return the index of `target`, but it fails on the last element. What's the bug?",
+      "code_snippet": "function findIndex(items, target) {\n  for (let i = 0; i < items.length - 1; i++) {\n    if (items[i] === target) {\n      return i;\n    }\n  }\n  return -1;\n}\nconsole.log(findIndex([3, 7, 9, 2], 2));",
+      "choices": null,
+      "correct_answer": "items.length - 1 stops the loop one index early. It should be i < items.length.",
+      "explanation": "items.length - 1 excludes the final index, so the last element is never checked.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "indexing",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "use i < items.length instead of i < items.length - 1"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-DBG-001",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This code is supposed to log the incremented count, but it doesn't work as expected. What is the bug, and how would you fix it?",
+      "code_snippet": "const counter = {\n  count: 0,\n  increment: function () {\n    setTimeout(function () {\n      this.count++;\n      console.log(this.count);\n    }, 100);\n  }\n};\ncounter.increment();",
+      "choices": null,
+      "correct_answer": "A regular function passed to setTimeout has its own `this`, which no longer refers to `counter`. Fix it with an arrow function, which inherits `this` from the surrounding scope.",
+      "explanation": "Regular functions get their own `this` binding depending on how they're called; setTimeout calls the callback without a receiver, so `this` isn't `counter`. An arrow function instead uses the `this` from where it was defined.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "this binding",
+        "closures",
+        "setTimeout"
+      ],
+      "accepted_answers": [
+        "use an arrow function",
+        "bind(this)",
+        "this does not refer to counter inside a regular function"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-DBG-002",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This function should return the squares of every even number in `arr`, but it has multiple bugs. Identify ALL of them.",
+      "code_snippet": "function getEvenSquares(arr) {\n  let results = [];\n  for (let i = 0; i <= arr.length; i++) {\n    if (arr[i] % 2 = 0) {\n      results.push(arr[i] * arr[i]);\n    }\n  }\n  return results;\n}",
+      "choices": null,
+      "correct_answer": "Bug 1: i <= arr.length reads one index past the end of the array. Bug 2: arr[i] % 2 = 0 uses assignment (=) instead of comparison (=== or ==).",
+      "explanation": "Valid indices only go up to arr.length - 1, so <= causes an out-of-bounds read. Separately, `=` inside the if condition assigns rather than compares \u2014 it should be `arr[i] % 2 === 0`.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "loops",
+        "operators",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "loop should use i < arr.length, not <=",
+        "use === or == instead of = in the condition"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-FIB-001",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so this async function correctly waits for the JSON body to be parsed.",
+      "code_snippet": "async function fetchUserName(id) {\n  const response = await fetch(`/api/users/${id}`);\n  const data = ______ response.json();\n  return data.name;\n}",
+      "choices": null,
+      "correct_answer": "await",
+      "explanation": "response.json() returns a Promise, so it must be awaited before `data` holds the actual parsed object.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "async/await",
+        "promises",
+        "fetch"
+      ],
+      "accepted_answers": [
+        "await"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-FIB-002",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank with the array method that transforms every element into its square.",
+      "code_snippet": "const squares = [1, 2, 3, 4, 5].______(x => x * x);\nconsole.log(squares); // [1, 4, 9, 16, 25]",
+      "choices": null,
+      "correct_answer": "map",
+      "explanation": "Array.prototype.map creates a new array by applying the given function to every element.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "arrays",
+        "higher-order functions"
+      ],
+      "accepted_answers": [
+        "map"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-MCQ-001",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is the value of `rest` after this code runs?",
+      "code_snippet": "const [first, second, ...rest] = [10, 20, 30, 40, 50];",
+      "choices": [
+        "[30, 40, 50]",
+        "[10, 20]",
+        "30",
+        "[20, 30, 40, 50]"
+      ],
+      "correct_answer": "[30, 40, 50]",
+      "explanation": "Rest syntax collects every remaining element after the ones already destructured into a new array.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "destructuring",
+        "arrays",
+        "rest/spread"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-HARD-MCQ-002",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is logged?",
+      "code_snippet": "function makeCounter() {\n  let count = 0;\n  return function () {\n    count++;\n    return count;\n  };\n}\nconst counter1 = makeCounter();\nconsole.log(counter1());\nconsole.log(counter1());",
+      "choices": [
+        "1 1",
+        "1 2",
+        "0 1",
+        "undefined undefined"
+      ],
+      "correct_answer": "1 2",
+      "explanation": "Each call to makeCounter() creates a new closure over its own `count` variable, which persists between calls to the returned function, incrementing from 1 to 2.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "closures",
+        "functions"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-HARD-MCQ-003",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "function* gen() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nconst g = gen();\nconsole.log(g.next().value);\nconsole.log(g.next().value);",
+      "choices": [
+        "1 2",
+        "1 1",
+        "3 3",
+        "Error, generators can't use next()"
+      ],
+      "correct_answer": "1 2",
+      "explanation": "Each call to next() resumes the generator where it left off, returning the next yielded value in sequence.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "generators",
+        "iterators"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JS-HARD-OUT-001",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "function outer() {\n  let funcs = [];\n  for (let i = 0; i < 3; i++) {\n    funcs.push(() => i * 2);\n  }\n  return funcs.map(f => f());\n}\nconsole.log(outer());",
+      "choices": null,
+      "correct_answer": "[0, 2, 4]",
+      "explanation": "Unlike var, let creates a brand-new binding of i for every loop iteration, so each closure captures its own distinct value (0, 1, 2), giving [0, 2, 4].",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "closures",
+        "let vs var",
+        "arrays"
+      ],
+      "accepted_answers": [
+        "[0, 2, 4]",
+        "0,2,4"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-OUT-002",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print (in order)?",
+      "code_snippet": "function divide(a, b) {\n  try {\n    if (b === 0) throw new Error(\"Cannot divide by zero\");\n    return a / b;\n  } catch (e) {\n    return e.message;\n  } finally {\n    console.log(\"Done\");\n  }\n}\nconsole.log(divide(10, 0));",
+      "choices": null,
+      "correct_answer": "Done then Cannot divide by zero",
+      "explanation": "finally always runs before the function's return value reaches the caller, so \"Done\" logs first, then the outer console.log shows the returned error message.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "try/catch/finally",
+        "error handling"
+      ],
+      "accepted_answers": [
+        "Done then Cannot divide by zero",
+        "Done\nCannot divide by zero"
+      ]
+    },
+    {
+      "question_id": "JS-HARD-OUT-003",
+      "language": "JavaScript",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "const matrix = [[1, 2, 3], [4, 5, 6]];\nconst flat = matrix.flatMap(row => row.filter(num => num % 2 === 0));\nconsole.log(flat);",
+      "choices": null,
+      "correct_answer": "[2, 4, 6]",
+      "explanation": "flatMap first filters each row for even numbers, then flattens the resulting arrays into one: 2, 4, and 6.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "arrays",
+        "flatMap",
+        "higher-order functions"
+      ],
+      "accepted_answers": [
+        "[2, 4, 6]"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-MCQ-001",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which data type should be used to store a value like 3.14 in Java?",
+      "code_snippet": null,
+      "choices": [
+        "int",
+        "double",
+        "boolean",
+        "char"
+      ],
+      "correct_answer": "double",
+      "explanation": "double stores decimal (floating-point) values, while int can only hold whole numbers.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "data types",
+        "variables"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-BEG-MCQ-002",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which of the following is a valid variable name in Java?",
+      "code_snippet": null,
+      "choices": [
+        "2ndPlace",
+        "class",
+        "totalScore",
+        "my-variable"
+      ],
+      "correct_answer": "totalScore",
+      "explanation": "Variable names can't start with a digit, can't be reserved words like class, and can't contain hyphens.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax",
+        "variables"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-BEG-MCQ-003",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "What data type does Scanner's nextLine() method return?",
+      "code_snippet": null,
+      "choices": [
+        "int",
+        "double",
+        "String",
+        "char"
+      ],
+      "correct_answer": "String",
+      "explanation": "nextLine() reads a full line of input as a String; other Scanner methods like nextInt() are used for numeric types.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "input/output",
+        "Scanner"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-BEG-FIB-001",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to complete the else branch.",
+      "code_snippet": "int temperature = 30;\nif (temperature > 25) {\n    System.out.println(\"It's hot\");\n} ______ {\n    System.out.println(\"It's cool\");\n}",
+      "choices": null,
+      "correct_answer": "else",
+      "explanation": "else runs when the if condition is false.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "conditionals",
+        "syntax"
+      ],
+      "accepted_answers": [
+        "else"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-FIB-002",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so this prints the value of age.",
+      "code_snippet": "String name = \"Ana\";\nint age = 16;\nSystem.out.println(name + \" is \" + ______ + \" years old\");",
+      "choices": null,
+      "correct_answer": "age",
+      "explanation": "The + operator concatenates the String pieces with the value of age, automatically converting the int to text.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "strings",
+        "concatenation"
+      ],
+      "accepted_answers": [
+        "age"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-OUT-001",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What is printed?",
+      "code_snippet": "int a = 7;\nint b = 2;\nSystem.out.println(a / b);\nSystem.out.println((double) a / b);",
+      "choices": null,
+      "correct_answer": "3 then 3.5",
+      "explanation": "a / b divides two ints, which truncates to 3. Casting a to double first forces true floating-point division, giving 3.5.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "type casting",
+        "operators"
+      ],
+      "accepted_answers": [
+        "3 then 3.5",
+        "3\n3.5"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-OUT-002",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "int i = 1;\nwhile (i < 4) {\n    System.out.println(i);\n    i++;\n}",
+      "choices": null,
+      "correct_answer": "1 2 3",
+      "explanation": "The loop runs while i is less than 4, printing 1, 2, then 3, and stops once i becomes 4.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "while loops"
+      ],
+      "accepted_answers": [
+        "1 2 3",
+        "1\n2\n3"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-OUT-003",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "boolean a = true;\nboolean b = false;\nSystem.out.println(a && b);\nSystem.out.println(a || b);",
+      "choices": null,
+      "correct_answer": "false then true",
+      "explanation": "&& is true only when both are true; || is true when at least one is true.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "booleans",
+        "logical operators"
+      ],
+      "accepted_answers": [
+        "false then true",
+        "false\ntrue"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-DBG-001",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code fails to compile. What is the bug?",
+      "code_snippet": "int age = 20\nSystem.out.println(age);",
+      "choices": null,
+      "correct_answer": "Missing semicolon after `int age = 20`.",
+      "explanation": "Every statement in Java must end with a semicolon.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax errors"
+      ],
+      "accepted_answers": [
+        "missing semicolon after int age = 20"
+      ]
+    },
+    {
+      "question_id": "JAVA-BEG-DBG-002",
+      "language": "Java",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code fails to compile. What is the bug, and how would you fix it?",
+      "code_snippet": "int price = \"100\";\nSystem.out.println(price);",
+      "choices": null,
+      "correct_answer": "A String literal can't be assigned to an int variable. Remove the quotes (int price = 100;) or change the variable's type to String.",
+      "explanation": "Java is statically typed, so an int variable can only hold a numeric literal, not a String \u2014 \"100\" with quotes is text, not a number.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "data types",
+        "type errors"
+      ],
+      "accepted_answers": [
+        "can't assign a String to an int variable",
+        "remove the quotes: int price = 100;"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-FIB-001",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so this method correctly sums every element of `arr`.",
+      "code_snippet": "public static int sumArray(int[] arr) {\n    int sum = 0;\n    for (int i = 0; i < arr.length; i++) {\n        ______;\n    }\n    return sum;\n}",
+      "choices": null,
+      "correct_answer": "sum += arr[i]",
+      "explanation": "Each element needs to be added to the running total inside the loop.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "loops",
+        "methods"
+      ],
+      "accepted_answers": [
+        "sum += arr[i]",
+        "sum = sum + arr[i]"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-FIB-002",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so calling power(5) computes 5 to the power of 2 by default.",
+      "code_snippet": "public static int power(int base, int exponent) {\n    return (int) Math.pow(base, exponent);\n}\n\npublic static int power(int base) {\n    return power(base, ______);\n}",
+      "choices": null,
+      "correct_answer": "2",
+      "explanation": "Java doesn't support default parameter values directly, so an overloaded method calls the two-argument version with a fixed default value.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "method overloading",
+        "functions"
+      ],
+      "accepted_answers": [
+        "2"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-MCQ-001",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What is the output of this code?",
+      "code_snippet": "String a = new String(\"cat\");\nString b = new String(\"cat\");\nSystem.out.println(a == b);\nSystem.out.println(a.equals(b));",
+      "choices": [
+        "true, true",
+        "false, false",
+        "false, true",
+        "true, false"
+      ],
+      "correct_answer": "false, true",
+      "explanation": "== compares object references, and a and b are two separate objects created with new, so it's false. .equals() compares actual content, so it's true.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "strings",
+        "object references",
+        "equality"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-INT-MCQ-002",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What happens when you run this code?",
+      "code_snippet": "HashMap<String, Integer> map = new HashMap<>();\nmap.put(\"a\", 1);\nSystem.out.println(map.get(\"b\"));",
+      "choices": [
+        "It throws a NullPointerException",
+        "It prints null",
+        "It prints 0",
+        "It throws a NoSuchElementException"
+      ],
+      "correct_answer": "It prints null",
+      "explanation": "HashMap.get() returns null when the key isn't found, rather than throwing an exception.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "HashMap",
+        "collections"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-INT-MCQ-003",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What does list.subList(1, 4) return if list is an ArrayList containing [10, 20, 30, 40, 50]?",
+      "code_snippet": null,
+      "choices": [
+        "[10, 20, 30, 40]",
+        "[20, 30, 40]",
+        "[20, 30, 40, 50]",
+        "[10, 20, 30]"
+      ],
+      "correct_answer": "[20, 30, 40]",
+      "explanation": "subList(1, 4) returns elements from index 1 up to (but not including) index 4: 20, 30, 40.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "ArrayList",
+        "collections"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-INT-OUT-001",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this code print?",
+      "code_snippet": "int count = 0;\nfor (int i = 1; i <= 10; i++) {\n    if (i % 3 == 0) {\n        count++;\n    }\n}\nSystem.out.println(count);",
+      "choices": null,
+      "correct_answer": "3",
+      "explanation": "The multiples of 3 between 1 and 10 are 3, 6, and 9 \u2014 three numbers total.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "conditionals",
+        "modulus"
+      ],
+      "accepted_answers": [
+        "3"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-OUT-002",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "String text = \"Hello World\";\nSystem.out.println(text.toLowerCase().replace(\"world\", \"java\"));",
+      "choices": null,
+      "correct_answer": "hello java",
+      "explanation": "toLowerCase() converts the whole string first, so \"World\" becomes \"world\" and can then be matched by replace().",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "strings",
+        "string methods"
+      ],
+      "accepted_answers": [
+        "hello java"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-OUT-003",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What names does this print (order may vary)?",
+      "code_snippet": "HashMap<String, Integer> scores = new HashMap<>();\nscores.put(\"Ana\", 90);\nscores.put(\"Ben\", 75);\nscores.put(\"Cy\", 88);\nfor (String name : scores.keySet()) {\n    if (scores.get(name) >= 85) {\n        System.out.println(name);\n    }\n}",
+      "choices": null,
+      "correct_answer": "Ana and Cy (HashMap does not guarantee order)",
+      "explanation": "Ana (90) and Cy (88) both meet the score >= 85 condition; Ben (75) does not. HashMap does not guarantee insertion order, so Ana and Cy could print in either order.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "HashMap",
+        "loops",
+        "iteration order"
+      ],
+      "accepted_answers": [
+        "Ana and Cy, order may vary",
+        "Ana Cy",
+        "Cy Ana"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-DBG-001",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This method throws a ConcurrentModificationException. What is the bug, and how would you fix it?",
+      "code_snippet": "public static ArrayList<Integer> removeNegatives(ArrayList<Integer> numbers) {\n    for (Integer n : numbers) {\n        if (n < 0) {\n            numbers.remove(n);\n        }\n    }\n    return numbers;\n}",
+      "choices": null,
+      "correct_answer": "You can't structurally modify an ArrayList while iterating over it with for-each. Use numbers.removeIf(n -> n < 0), or an explicit Iterator's remove() method.",
+      "explanation": "A for-each loop uses an internal iterator that detects structural changes to the list mid-iteration and throws a ConcurrentModificationException.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "ArrayList",
+        "iteration",
+        "exceptions"
+      ],
+      "accepted_answers": [
+        "use an Iterator and its remove() method, or numbers.removeIf(n -> n < 0)",
+        "can't modify a list while iterating with for-each"
+      ]
+    },
+    {
+      "question_id": "JAVA-INT-DBG-002",
+      "language": "Java",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This method should return the index of `target`, but it fails on the last element. What's the bug?",
+      "code_snippet": "public static int findIndex(int[] items, int target) {\n    for (int i = 0; i < items.length - 1; i++) {\n        if (items[i] == target) {\n            return i;\n        }\n    }\n    return -1;\n}",
+      "choices": null,
+      "correct_answer": "items.length - 1 stops the loop one index early. It should be i < items.length.",
+      "explanation": "items.length - 1 excludes the final index, so the last element is never checked.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "indexing",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "use i < items.length instead of i < items.length - 1"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-DBG-001",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This method is meant to print an array in reverse order but throws an exception. What is the bug, and how would you fix it?",
+      "code_snippet": "public static void printReverse(int[] arr) {\n    for (int i = arr.length; i > 0; i--) {\n        System.out.println(arr[i]);\n    }\n}",
+      "choices": null,
+      "correct_answer": "Valid indices only go up to arr.length - 1. The loop must start at arr.length - 1 and run while i >= 0.",
+      "explanation": "Starting the loop at arr.length accesses an invalid index (ArrayIndexOutOfBoundsException), and the condition i > 0 also means index 0 is never printed.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "arrays",
+        "loops",
+        "exceptions"
+      ],
+      "accepted_answers": [
+        "start at arr.length - 1",
+        "use i >= 0 instead of i > 0",
+        "ArrayIndexOutOfBoundsException / off-by-one"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-DBG-002",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This class has multiple bugs that stop it from working correctly. Identify ALL of them.",
+      "code_snippet": "public class BankAccount {\n    private double balance;\n\n    public BankAccount(double balance) {\n        balance = balance;\n    }\n\n    public void withdraw(double amount) {\n        if (amount > balance)\n            System.out.println(\"Insufficient funds\");\n            return;\n        balance = balance - amount;\n    }\n}",
+      "choices": null,
+      "correct_answer": "Bug 1: the constructor assigns the parameter to itself instead of the field \u2014 it needs this.balance = balance. Bug 2: the if statement has no braces, so return; runs unconditionally every time, meaning balance is never actually updated.",
+      "explanation": "Without this.balance, the field balance stays at its default (0.0) forever. And because there are no braces around the if body, only the println belongs to the if \u2014 the return statement always executes right after, so the withdrawal line is unreachable.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "constructors",
+        "this keyword",
+        "control flow",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "constructor should use this.balance = balance",
+        "missing braces around the if statement",
+        "return runs unconditionally so balance is never updated"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-FIB-001",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so calling power(5) computes 5 to the power of 2 via method overloading is NOT this one \u2014 fill with the Stream method that transforms every element into its square.",
+      "code_snippet": "List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\nList<Integer> squares = nums.stream()\n    .______(x -> x * x)\n    .collect(Collectors.toList());\nSystem.out.println(squares); // [1, 4, 9, 16, 25]",
+      "choices": null,
+      "correct_answer": "map",
+      "explanation": "Stream's map() applies the given function to every element and produces a new stream of results.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "streams",
+        "functional programming"
+      ],
+      "accepted_answers": [
+        "map"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-FIB-002",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank with the annotation that marks this method as overriding a parent class method.",
+      "code_snippet": "class Animal {\n    void speak() {\n        System.out.println(\"Some sound\");\n    }\n}\n\nclass Dog extends Animal {\n    ______\n    void speak() {\n        System.out.println(\"Woof\");\n    }\n}",
+      "choices": null,
+      "correct_answer": "@Override",
+      "explanation": "@Override tells the compiler this method is meant to override a superclass method, which helps catch typos like a mismatched method signature.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "inheritance",
+        "polymorphism",
+        "annotations"
+      ],
+      "accepted_answers": [
+        "@Override"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-MCQ-001",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What happens when this code runs?",
+      "code_snippet": "class Counter {\n    static int count = 0;\n    Counter() {\n        count++;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        new Counter();\n        new Counter();\n        new Counter();\n        System.out.println(Counter.count);\n    }\n}",
+      "choices": [
+        "0",
+        "1",
+        "3",
+        "Compilation error"
+      ],
+      "correct_answer": "3",
+      "explanation": "count is static, so it is shared by every instance rather than each object getting its own copy; all three constructor calls increment the same shared variable.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "static variables",
+        "classes",
+        "constructors"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-HARD-MCQ-002",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "interface Operation {\n    int apply(int x);\n}\npublic class Main {\n    public static void main(String[] args) {\n        Operation square = x -> x * x;\n        System.out.println(square.apply(5));\n    }\n}",
+      "choices": [
+        "5",
+        "25",
+        "Compilation error",
+        "0"
+      ],
+      "correct_answer": "25",
+      "explanation": "The lambda x -> x * x implements the functional interface's apply method, so square.apply(5) computes 5 * 5 = 25.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "lambdas",
+        "functional interfaces"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-HARD-MCQ-003",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What happens when this code runs?",
+      "code_snippet": "try {\n    int[] arr = new int[3];\n    System.out.println(arr[5]);\n} catch (Exception e) {\n    System.out.println(\"Caught: \" + e.getClass().getSimpleName());\n}",
+      "choices": [
+        "It prints Caught: Exception",
+        "It prints Caught: ArrayIndexOutOfBoundsException",
+        "It crashes the program because Exception doesn't catch array errors",
+        "It prints Caught: NullPointerException"
+      ],
+      "correct_answer": "It prints Caught: ArrayIndexOutOfBoundsException",
+      "explanation": "ArrayIndexOutOfBoundsException is a subclass of Exception, so the catch block catches it; getClass().getSimpleName() reports its specific runtime type.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "exceptions",
+        "exception hierarchy"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "JAVA-HARD-OUT-001",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What is printed?",
+      "code_snippet": "class Shape {\n    double area() { return 0; }\n}\nclass Circle extends Shape {\n    double radius;\n    Circle(double radius) { this.radius = radius; }\n    double area() { return 3.14 * radius * radius; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Shape s = new Circle(2);\n        System.out.println(s.area());\n    }\n}",
+      "choices": null,
+      "correct_answer": "12.56",
+      "explanation": "Even though the variable's declared type is Shape, Java uses dynamic dispatch at runtime, so the overridden Circle version of area() runs: 3.14 * 2 * 2 = 12.56.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "polymorphism",
+        "inheritance",
+        "method overriding"
+      ],
+      "accepted_answers": [
+        "12.56"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-OUT-002",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print (in order)?",
+      "code_snippet": "public static String divide(int a, int b) {\n    try {\n        return String.valueOf(a / b);\n    } catch (ArithmeticException e) {\n        return \"Cannot divide by zero\";\n    } finally {\n        System.out.println(\"Done\");\n    }\n}\npublic static void main(String[] args) {\n    System.out.println(divide(10, 0));\n}",
+      "choices": null,
+      "correct_answer": "Done then Cannot divide by zero",
+      "explanation": "The finally block always executes before the method's return value reaches the caller, so \"Done\" prints first, then the returned message.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "try/catch/finally",
+        "exceptions"
+      ],
+      "accepted_answers": [
+        "Done then Cannot divide by zero",
+        "Done\nCannot divide by zero"
+      ]
+    },
+    {
+      "question_id": "JAVA-HARD-OUT-003",
+      "language": "Java",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "int[][] matrix = {{1, 2, 3}, {4, 5, 6}};\nList<Integer> evens = new ArrayList<>();\nfor (int[] row : matrix) {\n    for (int num : row) {\n        if (num % 2 == 0) {\n            evens.add(num);\n        }\n    }\n}\nSystem.out.println(evens);",
+      "choices": null,
+      "correct_answer": "[2, 4, 6]",
+      "explanation": "The nested loops visit every element of the 2D array, keeping only the even ones: 2, 4, and 6.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "2D arrays",
+        "nested loops"
+      ],
+      "accepted_answers": [
+        "[2, 4, 6]"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-MCQ-001",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which header must be included to use std::cout and std::cin in C++?",
+      "code_snippet": null,
+      "choices": [
+        "<stdio.h>",
+        "<iostream>",
+        "<string>",
+        "<cmath>"
+      ],
+      "correct_answer": "<iostream>",
+      "explanation": "<iostream> provides the standard input/output stream objects cin and cout.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "headers",
+        "input/output"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-BEG-MCQ-002",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "Which of the following is a valid variable name in C++?",
+      "code_snippet": null,
+      "choices": [
+        "2ndPlace",
+        "class",
+        "totalScore",
+        "my-variable"
+      ],
+      "correct_answer": "totalScore",
+      "explanation": "Variable names can't start with a digit, can't be reserved keywords like class, and can't contain hyphens.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax",
+        "variables"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-BEG-MCQ-003",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Multiple Choice",
+      "question": "What is the correct way to read an integer from user input in C++?",
+      "code_snippet": null,
+      "choices": [
+        "cin >> int x;",
+        "int x; cin >> x;",
+        "int x = cin;",
+        "read(x);"
+      ],
+      "correct_answer": "int x; cin >> x;",
+      "explanation": "You must declare the variable first, then use the extraction operator >> with cin to read a value into it.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "input/output",
+        "cin"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-BEG-FIB-001",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to complete the else branch.",
+      "code_snippet": "int temperature = 30;\nif (temperature > 25) {\n    cout << \"It's hot\";\n} ______ {\n    cout << \"It's cool\";\n}",
+      "choices": null,
+      "correct_answer": "else",
+      "explanation": "else runs when the if condition is false.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "conditionals",
+        "syntax"
+      ],
+      "accepted_answers": [
+        "else"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-FIB-002",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so this prints the value of age.",
+      "code_snippet": "string name = \"Ana\";\nint age = 16;\ncout << name << \" is \" << ______ << \" years old\";",
+      "choices": null,
+      "correct_answer": "age",
+      "explanation": "The << operator sends each value in sequence to cout; passing age outputs its numeric value.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "strings",
+        "cout"
+      ],
+      "accepted_answers": [
+        "age"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-OUT-001",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What is printed?",
+      "code_snippet": "int a = 9;\nint b = 4;\ncout << a / b << \" \" << a % b;",
+      "choices": null,
+      "correct_answer": "2 1",
+      "explanation": "Integer division truncates the decimal part, so 9 / 4 = 2; % gives the remainder, so 9 % 4 = 1.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "operators",
+        "integer division"
+      ],
+      "accepted_answers": [
+        "2 1"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-OUT-002",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "int i = 1;\nwhile (i < 4) {\n    cout << i << \" \";\n    i++;\n}",
+      "choices": null,
+      "correct_answer": "1 2 3",
+      "explanation": "The loop runs while i is less than 4, printing 1, 2, then 3, and stops once i becomes 4.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "while loops"
+      ],
+      "accepted_answers": [
+        "1 2 3"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-OUT-003",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "bool a = true;\nbool b = false;\ncout << (a && b) << \" \" << (a || b);",
+      "choices": null,
+      "correct_answer": "0 1",
+      "explanation": "C++ prints bool values as 0 (false) or 1 (true) by default; a && b is false since b is false, but a || b is true since a is true.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "booleans",
+        "logical operators"
+      ],
+      "accepted_answers": [
+        "0 1"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-DBG-001",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code fails to compile. What is the bug?",
+      "code_snippet": "int age = 20\ncout << age;",
+      "choices": null,
+      "correct_answer": "Missing semicolon after `int age = 20`.",
+      "explanation": "Every statement in C++ must end with a semicolon.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "syntax errors"
+      ],
+      "accepted_answers": [
+        "missing semicolon after int age = 20"
+      ]
+    },
+    {
+      "question_id": "CPP-BEG-DBG-002",
+      "language": "C++",
+      "difficulty": "Beginner",
+      "type": "Debugging",
+      "question": "This code compiles but always prints 'Perfect score' no matter the original value of score. What's the bug?",
+      "code_snippet": "int score = 85;\nif (score = 90) {\n    cout << \"Perfect score\";\n}",
+      "choices": null,
+      "correct_answer": "A single = assigns 90 to score instead of comparing. It should be == for comparison.",
+      "explanation": "A single = assigns 90 to score and then evaluates that assigned value as the condition; since 90 is nonzero, it's always treated as true.",
+      "points": 10,
+      "time_limit_seconds": 20,
+      "tags": [
+        "operators",
+        "syntax errors",
+        "common pitfalls"
+      ],
+      "accepted_answers": [
+        "use == instead of = for comparison",
+        "= assigns instead of compares"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-FIB-001",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank to correctly update `max` whenever a larger element is found.",
+      "code_snippet": "int findMax(int arr[], int size) {\n    int max = arr[0];\n    for (int i = 1; i < size; i++) {\n        if (arr[i] > max) {\n            ______;\n        }\n    }\n    return max;\n}",
+      "choices": null,
+      "correct_answer": "max = arr[i]",
+      "explanation": "When a bigger element is found, it should replace the value currently stored in max.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "loops",
+        "functions"
+      ],
+      "accepted_answers": [
+        "max = arr[i]"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-FIB-002",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank so calling power(5) computes 5 to the power of 2 by default.",
+      "code_snippet": "int power(int base, int exponent) {\n    return (int) pow(base, exponent);\n}\nint power(int base) {\n    return power(base, ______);\n}",
+      "choices": null,
+      "correct_answer": "2",
+      "explanation": "C++ function overloading lets the single-argument version call the two-argument version with a fixed default exponent.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "function overloading",
+        "functions"
+      ],
+      "accepted_answers": [
+        "2"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-MCQ-001",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What does this code print?",
+      "code_snippet": "int x = 10;\nint* p = &x;\n*p = 20;\ncout << x;",
+      "choices": [
+        "10",
+        "20",
+        "The address of x",
+        "Compilation error"
+      ],
+      "correct_answer": "20",
+      "explanation": "p holds the address of x, so dereferencing it with *p = 20 writes directly into x's memory, changing its value to 20.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "pointers",
+        "references"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-INT-MCQ-002",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What happens when you run this code?",
+      "code_snippet": "map<string, int> m;\nm[\"a\"] = 1;\ncout << m[\"b\"];",
+      "choices": [
+        "It throws an exception",
+        "It prints 0 (and inserts \"b\" into the map)",
+        "It prints garbage/undefined value",
+        "It fails to compile"
+      ],
+      "correct_answer": "It prints 0 (and inserts \"b\" into the map)",
+      "explanation": "Using operator[] on a std::map with a missing key default-constructs a value (0 for int) and inserts it, rather than throwing an error.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "map",
+        "STL"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-INT-MCQ-003",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Multiple Choice",
+      "question": "What is the key difference between vec.at(i) and vec[i] for a std::vector?",
+      "code_snippet": null,
+      "choices": [
+        "There is no difference",
+        "at(i) throws an out_of_range exception on an invalid index, while [] causes undefined behavior",
+        "[] is slower than at(i)",
+        "at(i) only works on arrays, not vectors"
+      ],
+      "correct_answer": "at(i) throws an out_of_range exception on an invalid index, while [] causes undefined behavior",
+      "explanation": "vector::at() performs bounds checking and throws std::out_of_range on an invalid index, while operator[] does not check and produces undefined behavior instead.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "vectors",
+        "STL",
+        "bounds checking"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-INT-OUT-001",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this code print?",
+      "code_snippet": "int nums[] = {2, 4, 6, 8};\nint total = 0;\nfor (int i = 0; i < 4; i++) {\n    total += nums[i] * 2;\n}\ncout << total;",
+      "choices": null,
+      "correct_answer": "40",
+      "explanation": "Each element is doubled and summed: (2 + 4 + 6 + 8) = 20, and 20 * 2 = 40.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "arrays",
+        "loops"
+      ],
+      "accepted_answers": [
+        "40"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-OUT-002",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "string text = \"Hello World\";\nfor (char &c : text) {\n    c = tolower(c);\n}\ncout << text;",
+      "choices": null,
+      "correct_answer": "hello world",
+      "explanation": "The range-based for loop with a reference (char &c) modifies each character in place, converting the whole string to lowercase.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "strings",
+        "loops",
+        "references"
+      ],
+      "accepted_answers": [
+        "hello world"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-OUT-003",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "map<string, int> scores = {{\"Ana\", 90}, {\"Ben\", 75}, {\"Cy\", 88}};\nfor (auto &pair : scores) {\n    if (pair.second >= 85) {\n        cout << pair.first << \" \";\n    }\n}",
+      "choices": null,
+      "correct_answer": "Ana Cy",
+      "explanation": "std::map keeps its entries sorted by key, so iteration visits Ana, Ben, then Cy in order; only Ana (90) and Cy (88) meet the score >= 85 condition.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "map",
+        "STL",
+        "iteration"
+      ],
+      "accepted_answers": [
+        "Ana Cy"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-DBG-001",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This code is supposed to remove all negative numbers but crashes or behaves unpredictably. What's the bug, and how would you fix it?",
+      "code_snippet": "vector<int> numbers = {1, -2, -3, 4, -5};\nfor (auto it = numbers.begin(); it != numbers.end(); ++it) {\n    if (*it < 0) {\n        numbers.erase(it);\n    }\n}",
+      "choices": null,
+      "correct_answer": "erase() invalidates the current iterator, so continuing to use or increment it afterward is undefined behavior. Reassign it = numbers.erase(it) instead of incrementing separately, or use the erase-remove idiom.",
+      "explanation": "vector::erase() invalidates the iterator pointing to the removed element (and all iterators after it). Assigning `it = numbers.erase(it)` keeps the iterator valid.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "vectors",
+        "iterators",
+        "undefined behavior"
+      ],
+      "accepted_answers": [
+        "erase invalidates the iterator; reassign it = numbers.erase(it)",
+        "use the erase-remove idiom"
+      ]
+    },
+    {
+      "question_id": "CPP-INT-DBG-002",
+      "language": "C++",
+      "difficulty": "Intermediate",
+      "type": "Debugging",
+      "question": "This function should return the index of `target`, but it fails on the last element. What's the bug?",
+      "code_snippet": "int findIndex(int items[], int size, int target) {\n    for (int i = 0; i < size - 1; i++) {\n        if (items[i] == target) {\n            return i;\n        }\n    }\n    return -1;\n}",
+      "choices": null,
+      "correct_answer": "size - 1 stops the loop one index early. It should be i < size.",
+      "explanation": "size - 1 excludes the final index, so the last element is never checked.",
+      "points": 20,
+      "time_limit_seconds": 30,
+      "tags": [
+        "loops",
+        "indexing",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "use i < size instead of i < size - 1"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-DBG-001",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This function should print every element of the array, but it causes undefined behavior. What is the bug, and how would you fix it?",
+      "code_snippet": "void printArray(int arr[], int size) {\n    for (int i = 0; i <= size; i++) {\n        cout << arr[i] << \" \";\n    }\n}",
+      "choices": null,
+      "correct_answer": "Valid indices only run from 0 to size - 1. The loop condition should be i < size, not i <= size.",
+      "explanation": "Using <= reads one element past the end of the array, which is undefined behavior in C++.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "arrays",
+        "loops",
+        "undefined behavior"
+      ],
+      "accepted_answers": [
+        "use i < size instead of i <= size",
+        "off-by-one / out-of-bounds access"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-DBG-002",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Debugging",
+      "question": "This function is supposed to return a dynamically created array, but it has multiple serious bugs. Identify ALL of them.",
+      "code_snippet": "int* createArray(int size) {\n    int arr[50];\n    for (int i = 0; i < size; i++) {\n        arr[i] = i * i;\n    }\n    return arr;\n}\n\nint main() {\n    int* result = createArray(5);\n    cout << result[0];\n    delete[] result;\n}",
+      "choices": null,
+      "correct_answer": "Bug 1: arr is a local stack array, so the pointer returned is dangling once the function ends. Bug 2: calling delete[] on memory that was never allocated with new[] is undefined behavior. Fix: allocate with new int[size] on the heap instead.",
+      "explanation": "Local arrays are destroyed when their function returns, making the returned pointer invalid (dangling). Separately, delete[] must only ever be paired with memory from new[]; using it on a stack array is undefined behavior.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "pointers",
+        "memory management",
+        "undefined behavior",
+        "debugging"
+      ],
+      "accepted_answers": [
+        "arr should be allocated with new int[size]",
+        "returning the address of a local/stack array is a dangling pointer",
+        "delete[] on non-heap memory is undefined behavior"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-FIB-001",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank using a member initializer list to set width and height from the constructor's parameters.",
+      "code_snippet": "class Rectangle {\npublic:\n    int width, height;\n    Rectangle(int w, int h) : ______ {}\n    int area() { return width * height; }\n};",
+      "choices": null,
+      "correct_answer": "width(w), height(h)",
+      "explanation": "A member initializer list sets class members directly from the constructor's parameters before the constructor body runs.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "classes",
+        "constructors",
+        "initializer list"
+      ],
+      "accepted_answers": [
+        "width(w), height(h)"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-FIB-002",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Fill in the Blank",
+      "question": "Fill in the blank with the STL algorithm that applies a function to every element and stores the results.",
+      "code_snippet": "vector<int> nums = {1, 2, 3, 4, 5};\nvector<int> squares(nums.size());\n______(nums.begin(), nums.end(), squares.begin(), [](int x) { return x * x; });\n// squares is now {1, 4, 9, 16, 25}",
+      "choices": null,
+      "correct_answer": "transform",
+      "explanation": "std::transform applies the given function to each element in the input range and writes the results to the output iterator.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "STL algorithms",
+        "transform"
+      ],
+      "accepted_answers": [
+        "transform",
+        "std::transform"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-MCQ-001",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "void increment(int n) {\n    n = n + 1;\n}\nint main() {\n    int x = 5;\n    increment(x);\n    cout << x;\n}",
+      "choices": [
+        "5",
+        "6",
+        "Compilation error",
+        "Undefined behavior"
+      ],
+      "correct_answer": "5",
+      "explanation": "increment takes n by value, so it only modifies a local copy \u2014 the original variable x in main is never touched.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "pass by value",
+        "functions"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-HARD-MCQ-002",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "int factor = 3;\nauto multiply = [factor](int x) { return x * factor; };\nfactor = 10;\ncout << multiply(5);",
+      "choices": [
+        "15",
+        "50",
+        "5",
+        "Compilation error"
+      ],
+      "correct_answer": "15",
+      "explanation": "Capturing factor by value ([factor]) copies its value at the time the lambda is created, so later changes to factor don't affect the lambda: 5 * 3 = 15.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "lambdas",
+        "captures"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-HARD-MCQ-003",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Multiple Choice",
+      "question": "What is printed?",
+      "code_snippet": "class Shape {\npublic:\n    virtual double area() { return 0; }\n};\nclass Circle : public Shape {\npublic:\n    double radius;\n    Circle(double r) : radius(r) {}\n    double area() override { return 3.14 * radius * radius; }\n};\nint main() {\n    Shape* s = new Circle(2);\n    cout << s->area();\n}",
+      "choices": [
+        "0",
+        "12.56",
+        "Compilation error",
+        "Undefined behavior"
+      ],
+      "correct_answer": "12.56",
+      "explanation": "Because area() is declared virtual, calling it through a base-class pointer still resolves to the derived class's overridden version at runtime: 3.14 * 2 * 2 = 12.56.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "polymorphism",
+        "virtual functions"
+      ],
+      "accepted_answers": null
+    },
+    {
+      "question_id": "CPP-HARD-OUT-001",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "void modify(int &a, int *b) {\n    a += 10;\n    *b += 5;\n}\nint main() {\n    int x = 1, y = 2;\n    modify(x, &y);\n    cout << x << \" \" << y;\n}",
+      "choices": null,
+      "correct_answer": "11 7",
+      "explanation": "a is a reference to x, so a += 10 changes x directly (1 + 10 = 11). b is a pointer to y, so *b += 5 changes y through dereferencing (2 + 5 = 7).",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "references",
+        "pointers",
+        "functions"
+      ],
+      "accepted_answers": [
+        "11 7"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-OUT-002",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "string divide(int a, int b) {\n    try {\n        if (b == 0) throw runtime_error(\"Cannot divide by zero\");\n        return to_string(a / b);\n    } catch (const exception &e) {\n        return e.what();\n    }\n}\nint main() {\n    cout << divide(10, 0);\n}",
+      "choices": null,
+      "correct_answer": "Cannot divide by zero",
+      "explanation": "Dividing by zero triggers the thrown runtime_error, which is caught and its message returned by e.what().",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "exceptions",
+        "try/catch"
+      ],
+      "accepted_answers": [
+        "Cannot divide by zero"
+      ]
+    },
+    {
+      "question_id": "CPP-HARD-OUT-003",
+      "language": "C++",
+      "difficulty": "Hard",
+      "type": "Output Prediction",
+      "question": "What does this print?",
+      "code_snippet": "vector<vector<int>> matrix = {{1, 2, 3}, {4, 5, 6}};\nvector<int> evens;\nfor (auto &row : matrix) {\n    for (int num : row) {\n        if (num % 2 == 0) {\n            evens.push_back(num);\n        }\n    }\n}\nfor (int n : evens) cout << n << \" \";",
+      "choices": null,
+      "correct_answer": "2 4 6",
+      "explanation": "The nested loops visit every element of the 2D vector, keeping only the even ones: 2, 4, and 6.",
+      "points": 40,
+      "time_limit_seconds": 50,
+      "tags": [
+        "nested vectors",
+        "nested loops"
+      ],
+      "accepted_answers": [
+        "2 4 6"
+      ]
+    }
+  ]
+}
